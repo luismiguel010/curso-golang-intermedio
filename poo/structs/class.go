@@ -7,6 +7,13 @@ type Employee struct {
 	name string
 }
 
+func NewEmployee (id int, name string) *Employee {
+	return &Employee{ //Se coloca con & para devolver la referencia, porque sino Go los trata como una copia y no es tan óptimo
+		id: id, 
+		name: name,
+	}
+}
+
 func (e *Employee) SetId(id int) {
 	e.id = id
 }
@@ -24,9 +31,7 @@ func (e *Employee) GetName() string {
 }
 
 func main() {
-	e := Employee{}
-	e.SetId(5)
-	e.SetName("Name2")
-	fmt.Println(e.GetId())
-	fmt.Println(e.GetName())
+	e4 := NewEmployee(1, "Name2")
+	fmt.Println(e4.GetId())
+	fmt.Println(e4.GetName())
 }
