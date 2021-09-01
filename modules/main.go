@@ -1,7 +1,11 @@
 package main
 
-import "fmt"
+import (
+	"github.com/donvito/hellomod"
+	hellomod2 "github.com/donvito/hellomod/v2"
+)
 
 func main() {
-	fmt.Println("Hello World!")
+	hellomod.SayHello()
+	hellomod2.SayHello("Desde el curso de platzi ")
 }
