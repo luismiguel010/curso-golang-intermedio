@@ -34,6 +34,7 @@ func TestMax(t *testing.T) {
 	} {
 		{4, 2, 4},
 		{3, 2, 3},
+		{1, 2, 2},
 	}
 
 	for _, item := range tables {
