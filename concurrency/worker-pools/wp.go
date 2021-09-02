@@ -20,8 +20,6 @@ func main() {
 	for r:=0; r<len(tasks); r++ {
 		<- results
 	}
-
-
 }
 
 func Worker(id int, jobs <-chan int, results chan<- int) {
